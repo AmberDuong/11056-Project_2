@@ -97,15 +97,15 @@
         display: none;
     }
     
-    .wrapper {
+    /* .wrapper {
         display: grid;
         grid-template-columns: repeat(3,100%);
         overflow:hidden;
         scroll-behavior: smooth;
         height: auto;
-    }  
+    }   */
     
-    .wrapper section {
+    /* .wrapper section {
         width: 100%;
         justify-content: center;
         justify-items: center;
@@ -113,61 +113,52 @@
         display: grid;
         grid-template-columns: repeat(5, auto);
         margin: 20px auto;
-    }      
+    }       */
     
-    .wrapper section .item {
+    .item {
         position: relative;
         padding: 0 2px;
         transition: duration all;
+        width: 18vw;
     }        
     
-    .wrapper section .item:hover { 
+    .item:hover { 
         margin: 0 20px;
         transform: scale(1.1);
         z-index: 99;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     
-    .wrapper section .item img{
+    .item img{
         object-fit: cover;
         width: 18vw;
         height: 12em;
     }
       
-    .wrapper section .item:hover .hidden{ 
+    .item:hover .hidden{ 
         display: block;
     }
     
-    .wrapper section .item-info .card-body{
+    .item-info .card-body{
         background-color: #fff;
         color: #141414;
         padding: 10px;
     }     
       
-    .wrapper section .arrow__btn {
-        position: absolute;
-        color:  rgb(253, 0, 97);
-        text-decoration: none;
-        font-size: 6em;
-        padding: 20px;
-        text-align: center;
-        z-index: 1;
-    }
       
-    .wrapper section .left-arrow {
+    .left-arrow {
         top:0; 
         bottom:0; 
         left:0;
     }
           
-    .wrapper section .right-arrow {
+    .right-arrow {
         top:0; 
         bottom:0; 
         right: 0;
     }
     
     .item {
-        flex: 1 1 0px;
         transition: transform 300ms ease 100ms;
     }
     
@@ -175,9 +166,126 @@
         display: block;
     }
     
+    .carousel {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
     
+    .slider{
+        height: 100%;
+        display: flex;
+        width: 300%;
+        transition: all 0.3s;
+        flex-basis: 100%;
+        /* padding: 100px; */
+        margin: 20px 80px;
+    }
+
+    /* .slider {
+        display: grid;
+        grid-template-columns: repeat(3,100%);
+        overflow:hidden;
+        scroll-behavior: smooth;
+        height: auto;
+    }   */
     
+
+
+    /* .slider section {
+        width: 100%;
+        justify-content: center;
+        justify-items: center;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        margin: 20px auto;
+    }       */
     
+    /* .slider section .item {
+        position: relative;
+        padding: 0 2px;
+        transition: duration all;
+    }         */
+
+    .item{
+        margin: .2em;
+        transition: duration all;
+
+        /* width: 15%; */
+        /* text-align: center; */
+        /* align-items: flex-start; */
+    }
     
+    .item:hover { 
+        margin: 0 20px;
+        transform: scale(1.1);
+        z-index: 99;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
     
+    .item img{
+        object-fit: cover;
+        width: 18vw;
+        height: 10em;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+    }
+      
+    .item:hover .hidden{ 
+        display: block;
+    }
     
+    .item-info .card-body{
+        background-color: #fff;
+        color: #141414;
+        padding: 10px;
+    }     
+      
+
+
+    /* navigation */
+
+
+/* buttons styling */
+.controls .arrow {
+	position: absolute;
+    cursor: pointer;
+	font-size: 2em;
+	transform: translateY(150%);
+    z-index: 2;
+}
+
+.arrow.left {
+	left: 30px;
+}
+
+.arrow.right{
+	right: 30px;
+}
+
+.controls ul{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%);
+	list-style: none;
+	display: flex;
+	padding: 0;
+	margin: 0;
+    opacity: 0;
+
+}
+
+.controls ul li{
+	width: 20px;
+	height: 20px;
+	border: 2px solid #25242C;
+	border-radius: 50px;
+	margin: 10px;
+	background: rgb(220, 220, 220);
+	cursor: pointer;
+}
+
+
