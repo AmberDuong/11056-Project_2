@@ -1,94 +1,82 @@
-// carousel slider
-const slider_1 = document.querySelector(".slider_1");
-const leftArrow_1 = document.querySelector(".left_1");
-const rightArrow_1 = document.querySelector(".right_1");
-const indicatorParents_1 = document.querySelector('.control_1 ul');
-var sectionIndex_1 = 0;
+const slider = document.querySelector(".slider");
+const movies = document.querySelectorAll(".movie");
+const prevButton = document.querySelector(".prev-button");
+const nextButton = document.querySelector(".next-button");
 
-function setIndex_1() {
-    document.querySelector(".control_1 .selected").classList.remove("selected");
-    slider_1.style.transform = "translate(" + (sectionIndex_1) * -30.5 + "%)";
+// Set the starting position of the active movie
+let activeMovieIndex = Math.floor(movies.length / 2 );
+
+// // Update the position of each movie within the slider
+const updateSlider = () => {
+    movies.forEach((movie, index) => {
+        // Calculate the offset of the movie based on its position relative to the active movie
+        let offset = index - activeMovieIndex;
+        
+        // Handle the case where the active movie is at the beginning or end of the slider
+        if (offset < -1) {
+        offset += movies.length;
+        } else if (offset > 1) {
+        offset -= movies.length;
+        }
+        
+        // Move the active movie to the center of the slider
+        if (offset === 0) {
+        movie.classList.add("movie--active");
+        movie.style.transform = `translateX(0)`;
+        } else {
+        movie.classList.remove("movie--active");
+        // Hide movies that are more than 2 positions away from the active movie
+        if (Math.abs(offset) > 1) {
+            movie.style.display = "none";
+        } else {
+            movie.style.display = "block";
+            const position = offset * 100/3;
+            movie.style.transform = `translateX(${position}%)`;
+        }
+        }
+    });
+    };
+    
+    // Move the active movie to the left
+    const moveLeft = () => {
+    activeMovieIndex--;
+    if (activeMovieIndex < 0) {
+    activeMovieIndex = movies.length - 1;
+    }
+    updateSlider();
+    };
+    
+    // Move the active movie to the right
+    const moveRight = () => {
+    activeMovieIndex++;
+    if (activeMovieIndex >= movies.length) {
+    activeMovieIndex = 0;
+    }
+    updateSlider();
+    };
+    
+    // Add event listeners to the prev and next buttons
+    prevButton.addEventListener("click", moveLeft);
+    nextButton.addEventListener("click", moveRight);
+    
+    // Set the initial position of each movie within the slider
+updateSlider();
+
+
+
+function on1() {
+    document.getElementById("overlay1").style.display = "block";
+}
+  
+function off1() {
+    document.getElementById("overlay1").style.display = "none";
 }
 
-document.querySelectorAll(".control_1 li").forEach(function(indicator, ind) {
-    indicator.addEventListener("click", function() {
-        sectionIndex_1 = ind;
-        setIndex_1();
-        indicator.classList.add("selected");
-    });
-});
-
-leftArrow_1.addEventListener("click", function() {
-    sectionIndex_1 = (sectionIndex_1 > 0) ? sectionIndex_1 - 1 : 0;
-    indicatorParents_1.children[sectionIndex_1].classList.add("selected");
-    setIndex_1();
-});
-
-rightArrow_1.addEventListener("click", function() {
-    sectionIndex_1 = (sectionIndex_1 < 2) ? sectionIndex_1 + 1 : 2;
-    indicatorParents_1.children[sectionIndex_1].classList.add("selected");
-    setIndex_1();
-});
-
-
-const slider_2 = document.querySelector(".slider_2");
-const leftArrow_2 = document.querySelector(".left_2");
-const rightArrow_2 = document.querySelector(".right_2");
-const indicatorParents_2 = document.querySelector('.control_2 ul');
-var sectionIndex_2 = 0;
-
-function setIndex_2() {
-    document.querySelector(".control_2 .selected").classList.remove("selected");
-    slider_2.style.transform = "translate(" + (sectionIndex_2) * -30.5 + "%)";
+function on2() {
+    document.getElementById("overlay2").style.display = "block";
+}
+  
+function off2() {
+    document.getElementById("overlay2").style.display = "none";
 }
 
-document.querySelectorAll(".control_2 li").forEach(function(indicator, ind) {
-    indicator.addEventListener("click", function() {
-        sectionIndex_2 = ind;
-        setIndex_2();
-        indicator.classList.add("selected");
-    });
-});
-
-leftArrow_2.addEventListener("click", function() {
-    sectionIndex_2 = (sectionIndex_2 > 0) ? sectionIndex_2 - 1 : 0;
-    indicatorParents_2.children[sectionIndex_2].classList.add("selected");
-    setIndex_2();
-});
-
-rightArrow_2.addEventListener("click", function() {
-    sectionIndex_2 = (sectionIndex_2 < 2) ? sectionIndex_2 + 1 : 2;
-    indicatorParents_2.children[sectionIndex_2].classList.add("selected");
-    setIndex_2();
-});
-
-const slider_3 = document.querySelector(".slider_3");
-const leftArrow_3 = document.querySelector(".left_3");
-const rightArrow_3 = document.querySelector(".right_3");
-const indicatorParents_3 = document.querySelector('.control_3 ul');
-var sectionIndex_3 = 0;
-
-function setIndex_3() {
-    document.querySelector(".control_3 .selected").classList.remove("selected");
-    slider_3.style.transform = "translate(" + (sectionIndex_3) * -30.5 + "%)";
-}
-
-document.querySelectorAll(".control_3 li").forEach(function(indicator, ind) {
-    indicator.addEventListener("click", function() {
-        sectionIndex_3 = ind;
-        setIndex_3();
-        indicator.classList.add("selected");
-    });
-});
-
-leftArrow_3.addEventListener("click", function() {
-    sectionIndex_3 = (sectionIndex_3 > 0) ? sectionIndex_3 - 1 : 0;
-    indicatorParents_3.children[sectionIndex_3].classList.add("selected");
-    setIndex_3();
-});
-
-rightArrow_3.addEventListener("click", function() {
-    sectionIndex_3 = (sectionIndex_3 < 2) ? sectionIndex_3 + 1 : 2;
-    indicatorParents_3.children[sectionIndex_3].classList.add("selected");
-    setIndex_3();
-});
