@@ -12,386 +12,515 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <nav class="navbar p-3 justify-items-center">
-            <img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="Netflix Logo" class="logo">
+        <nav class="d-flex justify-content-center py-3">
             <ul class="menu">
-                <li><a href="series.html">Series</a></li>
+                <li><a href="series.html" id="currentPage">Series</a></li>
+                <li><a href="index.html" class="h3">Home</a></li>
                 <li><a href="movies.html">Movies</a></li>
-                <li><a href="">TV Shows</a></li>
             </ul>
         </nav>
-        <h1 class="display-1 fw-bold mt-5 mb-1">TV Series</h1>
-        <div class="slider">
-            <div class="slider__wrapper">
-              <div class="slider__viewport">
-                <div class="movie hidden">
-                    <img src="https://wallpaperaccess.com/full/6259728.png">
-                </div>
-                <div class="movie movie--1">
-                        <img src="https://wallpaperaccess.com/full/2855615.jpg">
-                        <div class="item-info">
-                            <h4 class="heading mt-3 mx-2">Money Heist</h4>
-                            <p class="card-text mx-2">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>								
-                            </p>
+        <main>
+            <h1 class="display-1 fw-bold mt-3">Series</h1>
+            <div class="slider">
+                <div class="slider__wrapper">
+                    <div class="slider__viewport">
+
+                        <div class="movie hidden">
+                            <img src="https://wallpaperaccess.com/full/6259728.png">
                         </div>
-                        <div class="card-body hidden">
-                            <div class="justify-content-between align-items-center m-2">
-                                <span class="badge">Thriller</span>
-                                <span class="badge">Crime</span>	
+
+                        <div class="item">
+                            <div class="overlay" id="overlay1" onclick="off1()">
+                                <div id="text">
+                                    Happiness is a South Korean television series starring Han Hyo-joo, Park Hyung-sik, and Jo Woo-jin, produced by Studio Dragon. It is an apocalyptic thriller that takes place in a time in which infectious diseases have become the new norm. It premiered on tvN on November 5, 2021 and aired every Friday and Saturday at 22:40 (KST) for 12 episodes. It is also available for streaming on Viki, Viu, Netflix, and iQIYI in selected territories.<br><br>
+                                    Happiness takes place in the near future, where the release of a failed treatment drug "Next" has caused a worldwide pandemic known as the Lytta Virus, a.k.a. "mad person disease". Those infected by lytta experience short bouts of insanity and bloodlust, before completely regressing into a zombie-like state. The South Korean Military and Police forces are trying to contain the spread of lytta and Next through extensive investigation and authoritative quarantine measures, while civil rights groups protest against them, believing the infected are still capable of normal human interaction.
+                                </div>
                             </div>
-                            <div class="justify-content-between align-items-center m-2">
-                                <small>Duration: 5 Parts</small>
-                            </div>
-                        </div>
-                </div>
-                <div class="movie movie--2">
-                    <img src="https://www.kimp.io/wp-content/uploads/2022/06/stranger-things-cover-poster-rev.jpg">
-                    <div class="item-info">
-                        <h4 class="heading mt-3 mx-2">Stranger Things</h4>
-                        <p class="card-text mx-2">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>										
-                        </p>
-                    </div>
-                    <div class="card-body hidden">
-                        <div class="justify-content-between align-items-center m-2">
-                            <span class="badge">Sci-Fi</span>
-                            <span class="badge">Teen</span>
-                        </div>
-                        <div class="justify-content-between align-items-center m-2">
-                            <small>Duration: 4 Seasons</small>
-                        </div>
-                    </div>                </div>
-                <div class="movie movie--3">
-                    <img src="https://korealandscape.net//wp-content/uploads/2021/09/my-name-netflix-1024x768.jpg">
-                    <div class="item-info">
-                        <h4 class="heading mt-3 mx-2">My Name</h4>
-                        <p class="card-text mx-2">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>											
-                        </p>
-                    </div>
-                    <div class="card-body hidden">
-                        <div class="justify-content-between align-items-center m-2">
-                            <span class="badge">Thriller</span>
-                            <span class="badge">Crime</span>	
-                        </div>
-                        <div class="justify-content-between align-items-center m-2">
-                            <small>Duration: 8 Episodes</small>
-                        </div>
-                    </div>                </div>
-                <div class="movie movie--4">                            
-                    <img src="https://tecake.com/wp-content/uploads/2020/09/sex-education-poster.jpg">
-                    <div class="item-info">
-                        <h4 class="heading mt-3 mx-2">Sex Education</h4>
-                        <p class="card-text mx-2">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>										
-                        </p>
-                    </div>
-                    <div class="card-body hidden">
-                        <div class="justify-content-between align-items-center m-2">
-                            <span class="badge">Teen</span>
-                            <span class="badge">Drama</span>	
-                        </div>
-                        <div class="justify-content-between align-items-center m-2">
-                            <small>Duration: 3 seasons</small>
-                        </div>
-                    </div>                </div>
-                <div class="movie movie--5">                            
-                    <img src="https://wallpaperboat.com/wp-content/uploads/2021/10/18/79418/squid-game-11.jpg">
-                    <div class="item-info">
-                        <h4 class="heading mt-3 mx-2">Squid Game</h4>
-                        <p class="card-text mx-2">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>											
-                        </p>
-                    </div>
-                    <div class="card-body hidden">
-                        <div class="justify-content-between align-items-center m-2">
-                            <span class="badge">Thriller</span>
-                            <span class="badge">Drama</span>	
-                            <span class="badge">Social Issue</span>	
-                        </div>
-                        <div class="justify-content-between align-items-center m-2">
-                            <small>Duration: 9 Episodes</small>
-                        </div>
-                    </div>                
-                </div>
-                <div class="movie movie--6">                          
-                    <img src="https://readysteadycut.com/wp-content/uploads/2021/08/AAAABdgl6LbGCHmih64YSr1SwMh3fR_FHM3yw7wKEVBITAWR-7EAgJ4I7_xgWjM3nVxl1VDC2gRok7Xd6bYN0FUdEW0y3bcl.jpeg">
-                    <div class="item-info">
-                        <h4 class="heading mt-3 mx-2">D.P.</h4>
-                        <p class="card-text mx-2">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>										
-                        </p>
-                    </div>
-                    <div class="card-body hidden">
-                        <div class="justify-content-between align-items-center m-2">
-                            <span class="badge">Drama</span>
-                            <span class="badge">Social Issue</span>	
-                        </div>
-                        <div class="justify-content-between align-items-center m-2">
-                            <small>Duration: 6 Episodes</small>
-                        </div>
-                    </div>                </div>
-                <div class="movie movie--7">
-                    <img src="https://photos.hancinema.net/photos/largephoto1320077.jpg">
-                    <div class="item-info">
-                        <h4 class="heading mt-3 mx-2">Mouse</h4>
-                        <p class="card-text mx-2">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>											
-                        </p>
-                    </div>
-                    <div class="card-body hidden">
-                        <div class="justify-content-between align-items-center m-2">
-                            <span class="badge">Thriller</span>
-                            <span class="badge">Crime</span>
-                            <span class="badge">Mystery</span>
-                            <span class="badge">Sci-Fi</span>	
-                        </div>
-                        <div class="justify-content-between align-items-center m-2">
-                            <small>Duration: 20 Episodes</small>
-                        </div>
-                    </div>                
-                </div>
-                <div>
-                    <div class="overlay" id="overlay1" onclick="off1()">
-                        <div id="text">
-                            Happiness is a South Korean television series starring Han Hyo-joo, Park Hyung-sik, and Jo Woo-jin, produced by Studio Dragon. It is an apocalyptic thriller that takes place in a time in which infectious diseases have become the new norm. It premiered on tvN on November 5, 2021 and aired every Friday and Saturday at 22:40 (KST) for 12 episodes. It is also available for streaming on Viki, Viu, Netflix, and iQIYI in selected territories.<br><br>
-                            Happiness takes place in the near future, where the release of a failed treatment drug "Next" has caused a worldwide pandemic known as the Lytta Virus, a.k.a. "mad person disease". Those infected by lytta experience short bouts of insanity and bloodlust, before completely regressing into a zombie-like state. The South Korean Military and Police forces are trying to contain the spread of lytta and Next through extensive investigation and authoritative quarantine measures, while civil rights groups protest against them, believing the infected are still capable of normal human interaction.
-                        </div>
-                    </div>
-                    <div  class="movie movie--8" onclick="on1()">
-                        <img src="https://koreanbinge.files.wordpress.com/2022/04/happiness-netflix-top10-tv-non-english.jpeg?w=930&h=450&crop=1">
-                        <div class="item-info">
-                            <h4 class="heading mt-3 mx-2">Happiness</h4>
-                            <p class="card-text mx-2">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>											
-                            </p>
-                        </div>
-                        <div class="card-body hidden">
-                            <div class="justify-content-between align-items-center m-2">
-                                <span class="badge">Thriller</span>
-                                <span class="badge">Crime</span>
-                                <span class="badge">Drama</span>
-                                <span class="badge">Horror</span>	
-                                <span class="badge">Action</span>	
-                            </div>
-                            <div class="justify-content-between align-items-center m-2">
-                                <small>Duration: 12 Episodes</small>
-                            </div>
-                        </div>  
-                    </div>
-                </div>
-                
-                <div>
-                    <div class="overlay" id="overlay2" onclick="off2()">
-                        <div id="text">
-                            Emily in Paris is an American romantic comedy-drama television series created by Darren Star for Netflix. The series stars Lily Collins as aspiring marketing executive Emily Cooper, an American who moves to Paris to provide an American point of view to a French marketing firm. In Paris, she tries to overcome the challenges that arise within her work, love life, and friendships. The series also stars Philippine Leroy-Beaulieu, Ashley Park, Lucas Bravo, Samuel Arnold, Bruno Gouery, Camille Razat, William Abadie, and Lucien Laviscount.
-                            Produced by MTV Entertainment Studios and originally developed for Paramount Network, where it was given a straight-to-series order in September 2018, the series moved to Netflix in July 2020. Filming takes place in Île-de-France, mainly in Paris and its suburbs, and began in August 2019.
-                            Emily in Paris premiered on October 2, 2020 to positive reviews in the United States but criticism in France for negatively stereotyping Parisians and the French. In November 2020, the series was renewed for a second season by Netflix, which premiered on December 22, 2021. In January 2022, the series was renewed for a third and fourth season by Netflix.The third season premiered on December 21, 2022.<br><br>
-                            Emily in Paris follows Emily Cooper, an American from Chicago with a Master's degree in communications, who moves to Paris to work for a marketing firm. She is tasked with bringing an American point of view and social media presence to a venerable French marketing firm. Cultures clash as she adjusts to the challenges of life in Paris while juggling her career, new friendships, and active love life.
-                        </div>
-                    </div>
-                    <div class="movie movie--9" onclick="on2()">
-                        <img src="https://staticg.sportskeeda.com/editor/2022/12/744f6-16715383823803-1920.jpg">
-                        <div class="item-info">
-                            <h4 class="heading mt-3 mx-2">Emily in Paris</h4>
-                            <p class="card-text mx-2">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>											
-                            </p>
-                        </div>
-                        <div class="card-body hidden">
-                            <div class="justify-content-between align-items-center m-2">
-                                <span class="badge">Drama</span>
-                                <span class="badge">Comedy</span>	
-                                <span class="badge">Romance</span>	
-                            </div>
-                            <div class="justify-content-between align-items-center m-2">
-                                <small>Duration: 2 Seasons</small>
+                            <div  class="movie movie--1" onclick="on1()">
+                                <img src="https://koreanbinge.files.wordpress.com/2022/04/happiness-netflix-top10-tv-non-english.jpeg?w=930&h=450&crop=1">
+                                <div class="item-info">
+                                    <h4 class="heading mt-3 mx-2">Happiness</h4>
+                                    <p class="card-text mx-2">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>											
+                                    </p>
+                                </div>
+                                <div class="card-body hidden">
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <span class="badge">Thriller</span>
+                                        <span class="badge">Crime</span>
+                                        <span class="badge">Drama</span>
+                                        <span class="badge">Horror</span>	
+                                        <span class="badge">Action</span>	
+                                    </div>
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <small>Duration: 12 Episodes</small>
+                                    </div>
+                                </div>  
                             </div>
                         </div>
+
+                        <div class="item">
+                            <div class="overlay" id="overlay2" onclick="off2()">
+                                <div id="text">
+                                    Stranger Things is an American science fiction horror drama television series created by the Duffer Brothers, who also serve as showrunners and are executive producers along with Shawn Levy and Dan Cohen. Produced by Monkey Massacre Productions and Levy's 21 Laps Entertainment, the first season was released on Netflix on July 15, 2016. Its second, third, and fourth seasons followed in October 2017, July 2019, and May and July 2022, respectively. In February 2022, it was renewed for a fifth and final season.<br><br>
+                                    Stranger Things is set in the fictional rural town of Hawkins, Indiana, in the 1980s. The nearby Hawkins National Laboratory ostensibly performs scientific research for the United States Department of Energy but secretly experiments with the paranormal and supernatural, sometimes with human test subjects. They have inadvertently created a portal to an alternate dimension they refer to as the Upside Down, whose presence begins to affect the residents of Hawkins in calamitous ways.
+                                </div>
+                            </div>
+                            <div class="movie movie--2" onclick="on2()">
+                                <img src="https://www.kimp.io/wp-content/uploads/2022/06/stranger-things-cover-poster-rev.jpg">
+                                <div class="item-info">
+                                    <h4 class="heading mt-3 mx-2">Stranger Things</h4>
+                                    <p class="card-text mx-2">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>										
+                                    </p>
+                                </div>
+                                <div class="card-body hidden">
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <span class="badge">Sci-Fi</span>
+                                        <span class="badge">Teen</span>
+                                    </div>
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <small>Duration: 4 Seasons</small>
+                                    </div>
+                                </div>                
+                            </div>                
+                        </div>
+
+                        <div class="item">
+                            <div class="overlay" id="overlay3" onclick="off3()">
+                                <div id="text">
+                                    My Name (Korean: 마이 네임; RR: Mai Neim) is a South Korean streaming television series directed by Kim Jin-min and starring Han So-hee, Park Hee-soon, and Ahn Bo-hyun. The series revolves around a woman who joins a gang to avenge her father's death and then becomes the gang's mole inside the police force. Three episodes out of eight were screened at 26th Busan International Film Festival in newly created 'On Screen' section, on October 7, 2021. It was released on Netflix on October 15, 2021. <br><br>
+                                    Yoon Ji-woo's (Han So-hee) father dies suddenly. She wants to desperately take revenge on whoever is responsible for her father's death. Yoon Ji-woo works for drug crime group Dongcheonpa. Choi Moo jin (Park Hee-soon) is the boss of the drug gang. With the help of Choi Moo-jin and to uncover the reason for her father's death, Yoon Ji-woo joins the police department and becomes a mole for the drug group. Yoon Ji-woo is assigned to work in the drug investigation unit in the police department. Her partner there is Detective Jeon Pil-do (Ahn Bo-hyun).
+                                </div>
+                            </div>
+                            <div class="movie movie--3" onclick="on3()">        
+                                <img src="https://korealandscape.net//wp-content/uploads/2021/09/my-name-netflix-1024x768.jpg">
+                                <div class="item-info">
+                                    <h4 class="heading mt-3 mx-2">My Name</h4>
+                                    <p class="card-text mx-2">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>											
+                                    </p>
+                                </div>
+                                <div class="card-body hidden">
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <span class="badge">Thriller</span>
+                                        <span class="badge">Crime</span>	
+                                    </div>
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <small>Duration: 8 Episodes</small>
+                                    </div>
+                                </div>               
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="overlay" id="overlay4" onclick="off4()">
+                                <div id="text">
+                                    Sex Education is a British comedy-drama streaming television series created by Laurie Nunn for Netflix. It follows the lives of the students, staff and parents of the fictional Moordale Secondary School as they contend with various personal dilemmas, often related to sexual intimacy. The series stars an ensemble cast that includes Asa Butterfield, Gillian Anderson, Ncuti Gatwa, Emma Mackey, Connor Swindells, Kedar Williams-Stirling, Alistair Petrie, Mimi Keene, and Aimee Lou Wood.<br><br>
+                                    Sex Education primarily follows Otis Milburn, a student at Moordale Secondary School. Otis begins the series ambivalent about sex, in part because his single mother, Jean, is a sex therapist who frequently has affairs with male suitors but does not maintain romantic relationships.
+                                </div>
+                            </div>
+                            <div class="movie movie--4" onclick="on4()">                            
+                                <img src="https://tecake.com/wp-content/uploads/2020/09/sex-education-poster.jpg">
+                                <div class="item-info">
+                                    <h4 class="heading mt-3 mx-2">Sex Education</h4>
+                                    <p class="card-text mx-2">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>										
+                                    </p>
+                                </div>
+                                <div class="card-body hidden">
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <span class="badge">Teen</span>
+                                        <span class="badge">Drama</span>	
+                                    </div>
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <small>Duration: 3 seasons</small>
+                                    </div>
+                                </div>                
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="overlay" id="overlay5" onclick="off5()">
+                                <div id="text">
+                                    Squid Game (Korean: 오징어 게임; RR: Ojing-eo Geim) is a South Korean survival drama television series created by Hwang Dong-hyuk for Netflix. Its cast includes Lee Jung-jae, Park Hae-soo, Wi Ha-joon, HoYeon Jung, O Yeong-su, Heo Sung-tae, Anupam Tripathi, and Kim Joo-ryoung.<br><br>
+                                    Seong Gi-hun, a divorced father and indebted gambler who lives with his elderly mother, is invited to play a series of children's games for a chance at a large cash prize. Accepting the offer, he is taken to an unknown location where he finds himself among 455 other players who are all in deep financial trouble. The players are made to wear green tracksuits and are kept under watch at all times by masked guards in pink jumpsuits, with the games overseen by the Front Man, who wears a black mask and black uniform. The players soon discover that losing a game results in their death, with each death adding ₩100 million to the potential ₩45.6 billion grand prize. Gi-hun allies with other players, including his childhood friend Cho Sang-woo and North Korean defector Kang Sae-byeok, to try to survive the physical and psychological twists of the games.
+                                </div>
+                            </div>
+                            <div class="movie movie--5" onclick="on5()">                            
+                                <img src="https://wallpaperboat.com/wp-content/uploads/2021/10/18/79418/squid-game-11.jpg">
+                                <div class="item-info">
+                                    <h4 class="heading mt-3 mx-2">Squid Game</h4>
+                                    <p class="card-text mx-2">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>											
+                                    </p>
+                                </div>
+                                <div class="card-body hidden">
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <span class="badge">Thriller</span>
+                                        <span class="badge">Drama</span>	
+                                        <span class="badge">Social Issue</span>	
+                                    </div>
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <small>Duration: 9 Episodes</small>
+                                    </div>
+                                </div>                
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="overlay" id="overlay6" onclick="off6()">
+                                <div id="text">
+                                    D.P. (an acronym for Deserter Pursuit) is a South Korean streaming television series directed by Han Jun-hee, from a screenplay by Kim Bo-tong and Han, based on the Lezhin webtoon D.P Dog's Day by Kim. The series stars Jung Hae-in, Koo Kyo-hwan, Kim Sung-kyun, and Son Suk-ku. It premiered in six parts on Netflix on August 27, 2021. The second season is scheduled to be released in 2023.<br><br>
+                                    Set in 2014, D.P. tells the story of a team of Korean military police with their mission to catch deserters. The series magnifies the undesirable nature of the military, especially within a South Korean context. The widespread bullying and hazing as well as the mindset for the "survival of the fittest" are rife, with those presumed the “weakest” thrown to the bottom of the pile and served horrifying experiences at the hands of their superiors and compatriots. Private Ahn Joon-ho and Corporal Han Ho-yul both team up to find the deserters, and end up in an adventurous journey.
+                                </div>
+                            </div>
+                            <div class="movie movie--6" onclick="on6()">                          
+                                <img src="https://readysteadycut.com/wp-content/uploads/2021/08/AAAABdgl6LbGCHmih64YSr1SwMh3fR_FHM3yw7wKEVBITAWR-7EAgJ4I7_xgWjM3nVxl1VDC2gRok7Xd6bYN0FUdEW0y3bcl.jpeg">
+                                <div class="item-info">
+                                    <h4 class="heading mt-3 mx-2">D.P.</h4>
+                                    <p class="card-text mx-2">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>										
+                                    </p>
+                                </div>
+                                <div class="card-body hidden">
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <span class="badge">Drama</span>
+                                        <span class="badge">Social Issue</span>	
+                                    </div>
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <small>Duration: 6 Episodes</small>
+                                    </div>
+                                </div>                
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="overlay" id="overlay7" onclick="off7()">
+                                <div id="text">
+                                    Mouse (Korean: 마우스; RR: Mauseu) is a thriller South Korean television series starring Lee Seung-gi, Lee Hee-joon, Park Ju-hyun, and Kyung Soo-jin. The series, directed by Choi Joon-bae and Kang Cheol-woo and written by Choi Ran, follows the confrontation of police officer Jeong Ba-reum (Lee Seung-gi) with a serial killer. It premiered on tvN on March 3, 2021, and aired every Wednesday and Thursday at 22:30 KST till May 20.<br><br>
+                                    Mouse fantasizes the scenario, what if psychopaths can feel remorse and guilt for their actions. It follows Jeong Ba-reum (Lee Seung-gi), a steadfast police officer, whose life changes when he encounters a psychopathic serial killer. This drives him and his partner Go Moo-chi (Lee Hee-joon) to unearth the truth behind psychopathic behaviours. This also raises the questions, whether it is possible to scan a psychopath in the mother's womb using fetal genetic testing? And if the child in the womb is a psychopath, will it be wise to have that child?
+                                </div>
+                            </div>
+                            <div class="movie movie--7" onclick="on7()">
+                                <img src="https://photos.hancinema.net/photos/largephoto1320077.jpg">
+                                <div class="item-info">
+                                    <h4 class="heading mt-3 mx-2">Mouse</h4>
+                                    <p class="card-text mx-2">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>											
+                                    </p>
+                                </div>
+                                <div class="card-body hidden">
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <span class="badge">Thriller</span>
+                                        <span class="badge">Crime</span>
+                                        <span class="badge">Mystery</span>
+                                        <span class="badge">Sci-Fi</span>	
+                                    </div>
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <small>Duration: 20 Episodes</small>
+                                    </div>
+                                </div>
+                            </div>            
+                        </div>
+
+                        <div class="item">
+                            <div class="overlay" id="overlay8" onclick="off8()">
+                                <div id="text">
+                                    Money Heist (Spanish: La casa de papel, 'The House of Paper') is a Spanish heist crime drama television series created by Álex Pina. The series traces two long-prepared heists led by the Professor (Álvaro Morte), one on the Royal Mint of Spain, and one on the Bank of Spain, told from the perspective of one of the robbers, Tokyo (Úrsula Corberó). The narrative is told in a real-time-like fashion and relies on flashbacks, time-jumps, hidden character motivations, and an unreliable narrator for complexity.<br><br>
+                                    Set in Madrid, a mysterious man known as the "Professor" recruits a group of eight people, who choose city names as their aliases, to carry out an ambitious plan that involves entering the Royal Mint of Spain, and escaping with €984 million. After taking 67 people hostage inside the Mint, the team plans to remain inside for 11 days to print the money as they deal with elite police forces. In the events following the initial heist, the group's members are forced out of hiding and prepare for a second heist, with some additional members, this time aiming to escape with gold from the Bank of Spain, as they again deal with hostages and police forces.
+                                </div>
+                            </div>
+                            <div class="movie movie--8" onclick="on8()">
+                                <img src="https://wallpaperaccess.com/full/2855615.jpg">
+                                <div class="item-info">
+                                    <h4 class="heading mt-3 mx-2">Money Heist</h4>
+                                    <p class="card-text mx-2">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>								
+                                    </p>
+                                </div>
+                                <div class="card-body hidden">
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <span class="badge">Thriller</span>
+                                        <span class="badge">Crime</span>	
+                                    </div>
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <small>Duration: 5 Parts</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="overlay" id="overlay9" onclick="off9()">
+                                <div id="text">
+                                    Emily in Paris is an American romantic comedy-drama television series created by Darren Star for Netflix. The series stars Lily Collins as aspiring marketing executive Emily Cooper, an American who moves to Paris to provide an American point of view to a French marketing firm. In Paris, she tries to overcome the challenges that arise within her work, love life, and friendships. The series also stars Philippine Leroy-Beaulieu, Ashley Park, Lucas Bravo, Samuel Arnold, Bruno Gouery, Camille Razat, William Abadie, and Lucien Laviscount.
+                                    Produced by MTV Entertainment Studios and originally developed for Paramount Network, where it was given a straight-to-series order in September 2018, the series moved to Netflix in July 2020. Filming takes place in Île-de-France, mainly in Paris and its suburbs, and began in August 2019.
+                                    Emily in Paris premiered on October 2, 2020 to positive reviews in the United States but criticism in France for negatively stereotyping Parisians and the French. In November 2020, the series was renewed for a second season by Netflix, which premiered on December 22, 2021. In January 2022, the series was renewed for a third and fourth season by Netflix.The third season premiered on December 21, 2022.<br><br>
+                                    Emily in Paris follows Emily Cooper, an American from Chicago with a Master's degree in communications, who moves to Paris to work for a marketing firm. She is tasked with bringing an American point of view and social media presence to a venerable French marketing firm. Cultures clash as she adjusts to the challenges of life in Paris while juggling her career, new friendships, and active love life.
+                                </div>
+                            </div>
+                            <div class="movie movie--9" onclick="on9()">
+                                <img src="https://staticg.sportskeeda.com/editor/2022/12/744f6-16715383823803-1920.jpg">
+                                <div class="item-info">
+                                    <h4 class="heading mt-3 mx-2">Emily in Paris</h4>
+                                    <p class="card-text mx-2">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>											
+                                    </p>
+                                </div>
+                                <div class="card-body hidden">
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <span class="badge">Drama</span>
+                                        <span class="badge">Comedy</span>	
+                                        <span class="badge">Romance</span>	
+                                    </div>
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <small>Duration: 2 Seasons</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="overlay" id="overlay10" onclick="off10()">
+                                <div id="text">
+                                    The Umbrella Academy is an American superhero television series based on the comic book series of the same name written by Gerard Way, illustrated by Gabriel Bá, and published by Dark Horse Comics. Created for Netflix by Steve Blackman and developed by Jeremy Slater, it revolves around a dysfunctional family of adopted sibling superheroes who reunite to solve the mystery of their father's death and the threat of an imminent apocalypse. The series is produced by Borderline Entertainment (season 1–2), Irish Cowboy (season 3), Dark Horse Entertainment, and Universal Content Productions. Netflix gave seasons 1 and 2 a TV-14 rating, while season 3 received a TV-MA rating.<br><br>
+                                    The Umbrella Academy is set in a universe where 43 women around the world give birth simultaneously at noon on October 1, 1989, although none had shown any sign of pregnancy until labor began. Seven of the children are adopted by eccentric billionaire Sir Reginald Hargreeves and turned into a superhero team that he calls "The Umbrella Academy." Hargreeves gives the children numbers rather than names, but their robot-mother, Grace, later names six of them: Luther, Diego, Allison, Klaus, Ben, and Vanya. Reginald puts six of the children to work fighting crime but keeps Vanya apart from her siblings' activities, claiming she demonstrates no powers of her own.
+                                </div>
+                            </div>
+                            <div class="movie movie--10" onclick="on10()">   
+                                <img src="https://3.bp.blogspot.com/-kSxzYrmXaGc/XIwsm1y3LiI/AAAAAAAAec0/Q4Jr92HhGwE-u7qGHup_t5y5O_fvqG7twCLcBGAs/w1200-h630-p-k-no-nu/the-umbrella-academy-uod-tile-102cc783jpg.jpg">
+                                <div class="item-info">
+                                    <h4 class="heading mt-3 mx-2">The Umbrella Academy</h4>
+                                    <p class="card-text mx-2">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>										
+                                    </p>
+                                </div>
+                                <div class="card-body hidden">
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <span class="badge">Sci-Fi</span>	
+                                        <span class="badge">Action</span>	
+                                    </div>
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <small>Duration: 3 Seasons</small>
+                                    </div>
+                                </div>                
+                            </div>      
+                        </div>
+
+                        <div class="item">
+                            <div class="overlay" id="overlay11" onclick="off11()">
+                                <div id="text">
+                                    Love in the Moonlight (Korean: 구르미 그린 달빛) is a South Korean television series starring Park Bo-gum, Kim Yoo-jung, Jung Jin-young, Chae Soo-bin, and Kwak Dong-yeon. It is a coming-of-age story and youth romance set during 19th-century Joseon Dynasty based on the web novel Moonlight Drawn by Clouds which was first serialized on Naver in 2013 and consequently published as a five-part series of books in 2015.<br><br>
+                                    The series is a coming of age story about Crown Prince Lee Yeong's (Park Bo-gum) growth from a boy into revered monarch and his unlikely relationship with eunuch Hong Ra-on (Kim Yoo-jung).
+                                </div>
+                            </div>
+                            <div class="movie movie--11" onclick="on11()">   
+                                <img src="https://thetalkingcupboard.files.wordpress.com/2016/08/moonlight1.jpg">
+                                <div class="item-info">
+                                    <h4 class="heading mt-3 mx-2">Love in the Moonlight</h4>
+                                    <p class="card-text mx-2">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>											
+                                    </p>
+                                </div>
+                                <div class="card-body hidden">
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <span class="badge">Drama</span>
+                                        <span class="badge">Romance</span>	
+                                        <span class="badge">Comedy</span>	
+                                    </div>
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <small>Duration: 16 Episodes</small>
+                                    </div>
+                                </div>                
+                            </div>
+                        </div>    
+                        
+                        <div class="item">
+                            <div class="overlay" id="overlay12" onclick="off12()">
+                                <div id="text">
+                                    Guardian: The Lonely and Great God (Korean: 쓸쓸하고 찬란하神 – 도깨비) is a South Korean television series starring Gong Yoo in the title role, alongside Kim Go-eun, Lee Dong-wook, Yoo In-na, and Yook Sung-jae. Written by Kim Eun-sook, the series aired on tvN from December 2, 2016, to January 21, 2017. <br><br>
+                                    Kim Shin (Gong Yoo), a decorated military general from the Goryeo Dynasty, is framed as a traitor and killed by the young king. Years after his death, he is cursed by the Almighty to stay immortal forever, enduring the pain of seeing his loved ones die as punishment for the soldiers he killed to protect his country. He becomes an immortal goblin, helping people with his powers and being a kind man in spite of his grieving past. The only way to put an end to his immortality is the Goblin's bride, whose aid in pulling out the sword will end his painful immortality. Ji Eun-tak (Kim Go-eun) is a bubbly high school student who remains cheerful and hopeful despite her tragic life. She summons the Goblin by chance and their fates begin to entwine. The Goblin's nephew, Yoo Deok-hwa (Yook Sung-jae), leases the Goblin's house to a Grim Reaper (Lee Dong-wook) and the two end up living under the same roof. Ji Eun-tak starts working a part-time job at a chicken store run by a charismatic young woman, Sunny (Yoo In-na). As the lives of Kim Shin, Grim Reaper, Ji Eun-tak and Sunny interweave, a deeper story unfolds, as they are not just strangers who met by chance, but people with deep-rooted relations.
+                                </div>
+                            </div>
+                            <div class="movie movie--12" onclick="on12()">  
+                                <img src="https://crazyaboutasiandramas.files.wordpress.com/2016/12/screen-shot-2016-12-30-at-9-12-40-pm.png">
+                                <div class="item-info">
+                                    <h4 class="heading mt-3 mx-2">Guardian: The Lonely and Great God</h4>
+                                    <p class="card-text mx-2">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>											
+                                    </p>
+                                </div>
+                                <div class="card-body hidden">
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <span class="badge">Drama</span>
+                                        <span class="badge">Romance</span>	
+                                        <span class="badge">Comedy</span>
+                                        <span class="badge">Fantasy</span>		
+                                    </div>
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <small>Duration: 16 Episodes</small>
+                                    </div>
+                                </div>                
+                            </div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="overlay" id="overlay13" onclick="off13()">
+                                <div id="text">
+                                    How I Met Your Mother (often abbreviated as HIMYM) is an American sitcom, created by Craig Thomas and Carter Bays for CBS. The series, which aired from September 19, 2005 to March 31, 2014, follows the main character, Ted Mosby, and his group of friends in New York City's Manhattan. As a framing device, Ted, in 2030, recounts to his son, Luke, and daughter, Penny, the events from September 2005 to May 2013 that led him to meet their mother. <br><br>
+                                    The series follows the adventures of Ted Mosby (played by Josh Radnor) and his love life as a single man. His stories are narrated by Bob Saget as Ted Mosby 25 years later as he tells them to his adolescent children. The story goes into a flashback and starts in 2005 with 27-year-old Ted Mosby living in New York City and working as an architect. The narrative deals primarily with his best friends, including the long-lasting couple Marshall Eriksen (Jason Segel) and Lily Aldrin (Alyson Hannigan), womanizing playboy Barney Stinson (Neil Patrick Harris), and Canadian news reporter Robin Scherbatsky (Cobie Smulders); all of the characters' lives are entwined. The series explores many storylines, including a "will they or won't they" relationship between Robin and each of the two single male friends, Marshall and Lily's relationship, and the ups and downs of the characters' careers.
+                                </div>
+                            </div>
+                            <div class="movie movie--13" onclick="on13()">  
+                                <img src="https://wildcatpause.com/wp-content/uploads/2022/03/HOWIMETYOURMOTHER-01-01-00WHORIZONTAL-1.jpg">
+                                <div class="item-info">
+                                    <h4 class="heading mt-3 mx-2">How I Met Your Mother</h4>
+                                    <p class="card-text mx-2">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>											
+                                    </p>
+                                </div>
+                                <div class="card-body hidden">
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <span class="badge">Romance</span>	
+                                        <span class="badge">Comedy</span>
+                                        <span class="badge">Sitcom</span>	
+                                    </div>
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <small>Duration: 9 Episodes</small>
+                                    </div>
+                                </div>                
+                            </div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="overlay" id="overlay14" onclick="off14()">
+                                <div id="text">
+                                    Our Beloved Summer (Korean: 그 해 우리는) is a South Korean romantic comedy television series. Billed as "Studio N's first original series", it is directed by Kim Yoon-jin with screenplay by Lee Na-eun, starring Choi Woo-shik, Kim Da-mi, Kim Sung-cheol, and Roh Jeong-eui. The series is a coming-of-age story about a former couple who are forced to come together again when a documentary they shot in high school goes viral. It premiered on SBS TV on December 6, 2021, and aired on Mondays and Tuesdays at 22:00 (KST) till January 25, 2022. It is available for streaming on Netflix. <br><br>
+                                    A coming-of-age romantic comedy that revolves around Choi Ung (Choi Woo-shik) and Kook Yeon-soo (Kim Da-mi), ex-lovers who broke up with a promise to never meet again. As luck would have it, the documentary they filmed ten years ago in high school went viral and they are forced to face the cameras together again by their producer friend. The series depicts their complicated feelings and growth. This drama shows what love feels like. Instead of discussing practical issues like family conflicts, it tells a story about throb, memory and dream. Romance is revealed in many small, unnoticed acts.
+                                </div>
+                            </div>
+                            <div class="movie movie--14" onclick="on14()">  
+                                <img src="https://wallpapercave.com/wp/wp10513367.jpg">
+                                <div class="item-info">
+                                    <h4 class="heading mt-3 mx-2">Our Beloved Summer</h4>
+                                    <p class="card-text mx-2">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>											
+                                    </p>
+                                </div>
+                                <div class="card-body hidden">
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <span class="badge">Romance</span>	
+                                        <span class="badge">Comedy</span>
+                                        <span class="badge">Teen</span>	
+                                    </div>
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <small>Duration: 16 Episodes</small>
+                                    </div>
+                                </div>                
+                            </div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="overlay" id="overlay15" onclick="off15()">
+                                <div id="text">
+                                    Prison Playbook (Korean: 슬기로운 감빵생활) is a 2017 South Korean television series directed by Shin Won-ho and starring Park Hae-soo and Jung Kyung-ho. The series marks Park Hae-soo's first-ever lead role. It aired from November 22, 2017 to January 18, 2018 on tvN's Wednesdays and Thursdays at 21:10 (KST) time slot for 16 episodes. The series was a commercial hit and became one of the highest rated Korean series on cable television history.<br><br>
+                                    A captivating series revolving around the lives of convicts behind bars, their families and duty officers working in the correctional facilities. It focuses on the story of a superstar baseball pitcher, Kim Je-hyuk who is convicted of assault after he saves his sister from a sexual assault.
+                                </div>
+                            </div>
+                            <div class="movie movie--15" onclick="on15()">
+                                <img src="https://wallpaperaccess.com/full/6259728.png">
+                                <div class="item-info">
+                                    <h4 class="heading mt-3 mx-2">Prison Playbook</h4>
+                                    <p class="card-text mx-2">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>										
+                                    </p>
+                                </div>
+                                <div class="card-body hidden">
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <span class="badge">Drama</span>	
+                                        <span class="badge">Comedy</span>
+                                        <span class="badge">Dark comedy</span>		
+                                    </div>
+                                    <div class="justify-content-between align-items-center m-2">
+                                        <small>Duration: 16 Episodes</small>
+                                    </div>
+                                </div>                
+                            </div>
+                        </div>
+                        
+                        <div class="movie hidden">
+                            <img src="https://wallpaperaccess.com/full/6259728.png">
+                        </div>
                     </div>
                 </div>
-                <div class="movie movie--10">
-                    <img src="https://3.bp.blogspot.com/-kSxzYrmXaGc/XIwsm1y3LiI/AAAAAAAAec0/Q4Jr92HhGwE-u7qGHup_t5y5O_fvqG7twCLcBGAs/w1200-h630-p-k-no-nu/the-umbrella-academy-uod-tile-102cc783jpg.jpg">
-                    <div class="item-info">
-                        <h4 class="heading mt-3 mx-2">The Umbrella Academy</h4>
-                        <p class="card-text mx-2">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>										
-                        </p>
-                    </div>
-                    <div class="card-body hidden">
-                        <div class="justify-content-between align-items-center m-2">
-                            <span class="badge">Sci-Fi</span>	
-                            <span class="badge">Action</span>	
-                        </div>
-                        <div class="justify-content-between align-items-center m-2">
-                            <small>Duration: 3 Seasons</small>
-                        </div>
-                    </div>                </div>
-                <div class="movie movie--11">
-                    <img src="https://thetalkingcupboard.files.wordpress.com/2016/08/moonlight1.jpg">
-                    <div class="item-info">
-                        <h4 class="heading mt-3 mx-2">Moonlight Drawn by Cloud</h4>
-                        <p class="card-text mx-2">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>											
-                        </p>
-                    </div>
-                    <div class="card-body hidden">
-                        <div class="justify-content-between align-items-center m-2">
-                            <span class="badge">Drama</span>
-                            <span class="badge">Romance</span>	
-                            <span class="badge">Comedy</span>	
-                        </div>
-                        <div class="justify-content-between align-items-center m-2">
-                            <small>Duration: 16 Episodes</small>
-                        </div>
-                    </div>                </div>
-                <div class="movie movie--12">
-                    <img src="https://crazyaboutasiandramas.files.wordpress.com/2016/12/screen-shot-2016-12-30-at-9-12-40-pm.png">
-                    <div class="item-info">
-                        <h4 class="heading mt-3 mx-2">Goblin</h4>
-                        <p class="card-text mx-2">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>											
-                        </p>
-                    </div>
-                    <div class="card-body hidden">
-                        <div class="justify-content-between align-items-center m-2">
-                            <span class="badge">Drama</span>
-                            <span class="badge">Romance</span>	
-                            <span class="badge">Comedy</span>
-                            <span class="badge">Fantasy</span>		
-                        </div>
-                        <div class="justify-content-between align-items-center m-2">
-                            <small>Duration: 16 Episodes</small>
-                        </div>
-                    </div>                </div>
-                <div class="movie movie--13">
-                    <img src="https://wildcatpause.com/wp-content/uploads/2022/03/HOWIMETYOURMOTHER-01-01-00WHORIZONTAL-1.jpg">
-                    <div class="item-info">
-                        <h4 class="heading mt-3 mx-2">How I Met Your Mother</h4>
-                        <p class="card-text mx-2">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>											
-                        </p>
-                    </div>
-                    <div class="card-body hidden">
-                        <div class="justify-content-between align-items-center m-2">
-                            <span class="badge">Romance</span>	
-                            <span class="badge">Comedy</span>
-                            <span class="badge">Sitcom</span>	
-                        </div>
-                        <div class="justify-content-between align-items-center m-2">
-                            <small>Duration: 9 Episodes</small>
-                        </div>
-                    </div>                </div>
-                <div class="movie movie--14">
-                    <img src="https://wallpapercave.com/wp/wp10513367.jpg">
-                    <div class="item-info">
-                        <h4 class="heading mt-3 mx-2">Our Beloved Summer</h4>
-                        <p class="card-text mx-2">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>											
-                        </p>
-                    </div>
-                    <div class="card-body hidden">
-                        <div class="justify-content-between align-items-center m-2">
-                            <span class="badge">Romance</span>	
-                            <span class="badge">Comedy</span>
-                            <span class="badge">Teen</span>	
-                        </div>
-                        <div class="justify-content-between align-items-center m-2">
-                            <small>Duration: 16 Episodes</small>
-                        </div>
-                    </div>                </div>
-                <div class="movie movie--15">
-                    <img src="https://wallpaperaccess.com/full/6259728.png">
-                    <div class="item-info">
-                        <h4 class="heading mt-3 mx-2">Prison Playbook</h4>
-                        <p class="card-text mx-2">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>										
-                        </p>
-                    </div>
-                    <div class="card-body hidden">
-                        <div class="justify-content-between align-items-center m-2">
-                            <span class="badge">Drama</span>	
-                            <span class="badge">Comedy</span>
-                            <span class="badge">Dark comedy</span>		
-                        </div>
-                        <div class="justify-content-between align-items-center m-2">
-                            <small>Duration: 16 Episodes</small>
-                        </div>
-                    </div>                </div>
-                <div class="movie hidden">
-                    <img src="https://wallpaperaccess.com/full/6259728.png">
-                </div>
-              </div>
+                <button class="button prev-button"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="button next-button"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
-            <button class="button prev-button"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="button next-button"><i class="fa-solid fa-chevron-right"></i></button>
-          </div>
-
-
-        <footer></footer>
-
-    
+        </main>
+        <footer>
+            <h6 class="d-flex justify-content-center fw-bold"><i class="fa-regular fa-copyright"></i> ALL RIGHTS RESERVED.</h6>
+        </footer>
         <script src="assets/script.js"></script>
     </body>
 </html>
