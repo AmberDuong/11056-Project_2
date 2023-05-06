@@ -78,6 +78,7 @@ const updateSlider = () => {
 updateSlider();
 
 
+// Onclick functions for overlay texts
 function on1() {
     document.getElementById("overlay1").style.display = "block";
 }
